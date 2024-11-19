@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./Navbar/page";
+import Offer from "./Offer/page";
+// import Link from "next/link";
+// import { useRouter } from "next/router";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +30,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
-        {children}
+        <div className="block h-screen w-screen">
+          <Offer></Offer>
+
+          <div className=" flex justify-center w-screen">
+            <Navbar></Navbar>
+          </div>
+          <div
+            className="h-full bg-cover bg-center bg-no-repeat bg-fixed"
+            style={{
+              backgroundImage: `url('/background.jpg')`,
+              height: "972px",
+            }}
+          >
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

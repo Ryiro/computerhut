@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.offer {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 89px;
+  width: 100vw;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+
+  justify-content: center;
+  padding-top: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.offer span {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: textRotation 25s infinite;
+}
+
+@keyframes textRotation {
+  0% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.offer span:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.offer span:nth-child(3) {
+  animation-delay: 10s;
+}
+
+.offer span:nth-child(4) {
+  animation-delay: 15s;
+}
+
+.offer span:nth-child(5) {
+  animation-delay: 20s;
+}
